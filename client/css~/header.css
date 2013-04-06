@@ -22,7 +22,7 @@ position: relative;
 #headerInner {
 width:960px;
 margin: 0 auto;	
-padding-top: 20px;
+padding-top: 24px;
 } 
 #header .grooves {
 position:absolute;
@@ -45,7 +45,7 @@ background: #B8E3FF;
 background: -webkit-gradient(linear, 0 0, 68% 0, from(transparent), to(transparent), color-stop(50%, #B8E3FF));
 }
 #headerInner .logo {
-
+margin-left:-6px;
 }
 #header .nav {
 float:right;
@@ -75,29 +75,25 @@ width: 97px;
 height: 98px;
 text-align:center;
 }
-#header .nav .pages #nav li.home {
-background: url('../../images/Shape3.png') center top no-repeat;
-}
 #header .nav .pages #nav li.about {
-background: url('../../images/Shape3.png') center top no-repeat;
+background: url('../../images/header_sprite.png') 0 0 no-repeat;
 }
 #header .nav .pages #nav li.contact {
-background: url('../../images/Shape2.png') center top no-repeat;
+background: url('../../images/contact_sprite.png') 0 0 no-repeat;
 }
-#header .nav .pages #nav li:hover {
-background: url('../../images/hover.png') center top no-repeat;
-cursor:pointer;
-}
-#header .nav .pages #nav li:active {
-background: url('../../images/hover.png') center top no-repeat;
+#header .nav .pages #nav li.contact:hover, 
+#header .nav .pages #nav li.contact:active,
+#header .nav .pages #nav li.contact:active:hover {
+background: url('../../images/contact_sprite.png') 0 -100px no-repeat;
+} 
+#header .nav .pages #nav li.about:hover, 
+#header .nav .pages #nav li.about:active,
+#header .nav .pages #nav li.about:active:hover {
+background: url('../../images/header_sprite.png') 0 -100px no-repeat;
 }
 #header .nav .pages #nav li:active:hover {
-background: url('../../images/hover.png') center top no-repeat;
 cursor:pointer;
 opacity:.8;
-}
-#header .nav .pages #nav li.active {
-background: url('../../images/hover.png') center top no-repeat;
 }
 #header .nav .pages a {
 line-height: 6;
@@ -109,7 +105,7 @@ width: 244px;
 height: 43px;
 float:right;
 margin-top:-5px;
-margin-right: -25px;
+margin-right: -3px;
 background: url('../../images/Layer3.png') 0 0 no-repeat;
 }
 #header .nav_button:hover {
@@ -126,7 +122,53 @@ font-size:16px;
 color:white;
 text-align:center;
 }
-
-
-
-
+.dropdown {
+background: url('../../images/dropdown.png');
+width: 242px;
+height: 179px;
+position:absolute;
+right: 50%;
+margin-right: -483px;
+top: 71px;
+z-index: 1;	
+}
+.dropdown .drop_inner li {
+width: 231px;
+height: 40px;
+text-align: center;
+line-height: 2.7;	
+}
+.dropdown .drop_inner li.one {
+background: #fdf8eb;
+margin-left: -36px;
+margin-top: -10px;
+-moz-border-radius: 4px 4px 0 0;
+-webkit-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+border:1px solid #086399;
+}
+.dropdown .drop_inner li.two {
+background: #fdf8eb;
+margin-left: -36px;
+border:1px solid #086399;
+border-top:1px solid #cecdcd;
+}
+.dropdown .drop_inner li.three {
+background: #fdf8eb;
+margin-left: -36px;
+border:1px solid #086399;
+border-top:1px solid #cecdcd;
+}
+.dropdown .drop_inner li.four {
+background: #fdf8eb;
+margin-left: -36px;
+-moz-border-radius: 0 0 4px 4px;
+-webkit-border-radius: 0 0 4px 4px;
+border-radius: 0 0 4px 4px;
+border:1px solid #086399;
+border-top:1px solid #cecdcd;
+}
+.dropdown .drop_inner li:hover {
+background: #5e94c0;
+color:white;	
+}
